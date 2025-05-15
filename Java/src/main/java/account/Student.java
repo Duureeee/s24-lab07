@@ -1,17 +1,13 @@
 package account;
 
-/**
- * Refactor Exercise 2: Account
- *
- * @author Zishen Wen (F22), Deyuan Chen (S22)
- */
-// TODO: Think about what can be a issue of the Student class?
-public class Student extends PaymentAccount {
-
+public class Student {
+    private final String name;
+    private final int studentID;
     private double gpa;
 
     public Student(String name, int studentID, double gpa) {
-        super(name, studentID);
+        this.name = name;
+        this.studentID = studentID;
         this.gpa = gpa;
     }
 
@@ -23,8 +19,11 @@ public class Student extends PaymentAccount {
         return this.gpa;
     }
 
-    @Override
-    public boolean pay(int amount) {
-        return false; // No payment option.
+    public int getStudentID() {
+        return this.studentID;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

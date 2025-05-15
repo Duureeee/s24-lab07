@@ -1,12 +1,5 @@
 package account;
-
-/**
- * Refactor Exercise 2: Account
- *
- * @author Zishen Wen (F22), Deyuan Chen (S22)
- */
 public abstract class PaymentAccount {
-
     private final String accountHolder;
     private final int accountNumber;
 
