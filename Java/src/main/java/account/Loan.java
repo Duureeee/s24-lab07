@@ -1,10 +1,6 @@
 package account;
 
-/**
- * Refactor Exercise 2: Account
- *
- * @author Zishen Wen (F22), Deyuan Chen (S22)
- */
+// Loan класс нь PaymentAccount-с удамшсан
 public class Loan extends PaymentAccount {
 
     private int balanceRemaining;
@@ -32,5 +28,4 @@ public class Loan extends PaymentAccount {
     public int getMinimumMonthlyPayment() {
         return this.minimumMonthlyPayment;
     }
-
 }

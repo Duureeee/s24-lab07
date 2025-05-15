@@ -1,5 +1,6 @@
 package account;
 
+// DebitCard класс нь PaymentAccount-с удамшсан
 public class DebitCard extends PaymentAccount {
     private int balance;
 
@@ -8,6 +9,7 @@ public class DebitCard extends PaymentAccount {
         this.balance = balance;
     }
 
+    @Override
     public boolean pay(int amount) {
         if (this.balance >= amount) {
             this.balance -= amount;
