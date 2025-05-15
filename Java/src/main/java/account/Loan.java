@@ -1,6 +1,5 @@
 package account;
 
-// Loan класс нь PaymentAccount-с удамшсан
 public class Loan extends PaymentAccount {
 
     private int balanceRemaining;

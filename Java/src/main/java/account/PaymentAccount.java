@@ -1,6 +1,5 @@
 package account;
 
-// PaymentAccount abstract класс
 public abstract class PaymentAccount {
     private final String accountHolder;
     private final int accountNumber;

@@ -1,6 +1,5 @@
 package account;
 
-// DebitCard класс нь PaymentAccount-с удамшсан
 public class DebitCard extends PaymentAccount {
     private int balance;
 

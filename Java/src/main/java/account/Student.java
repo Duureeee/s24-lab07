@@ -1,6 +1,5 @@
 package account;
 
-// Student класс
 public class Student {
     private final String name;
     private final int studentID;

@@ -1,9 +1,5 @@
 package account;
 
-import account.Student;
-import account.Loan;
-import account.DebitCard;
- 
 public class TestMain {
     public static void main(String[] args) {
         Student student = new Student("Suldee", 2025001, 3.75);
