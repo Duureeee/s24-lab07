@@ -9,7 +9,6 @@ import java.io.Writer;
 import java.util.List;
 
 public class Drawing {
-
     private List<Shape> shapes;
 
     public Drawing(List<Shape> shapes) {
@@ -27,7 +26,7 @@ public class Drawing {
     public void draw(String format, String filename) {
         try (Writer writer = getWriterForFormat(format, filename)) {
             for (Shape shape : this.shapes) {
-                shape.draw(writer);  // toLines-г Drawing-д авчирч хэрэглэх шаардлагагүй
+                shape.draw(writer);
             }
         } catch (IOException e) {
             e.printStackTrace();
