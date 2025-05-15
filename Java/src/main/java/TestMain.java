@@ -1,4 +1,7 @@
-package account;
+
+import account.DebitCard;
+import account.Loan;
+import account.Student;
 
 public class TestMain {
     public static void main(String[] args) {
