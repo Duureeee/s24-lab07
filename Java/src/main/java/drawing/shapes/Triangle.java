@@ -1,10 +1,5 @@
 package drawing.shapes;
 
-/**
- * Refactor Task 3: (Mis-)Shaped
- *
- * @author Zishen Wen (F22), Deyuan Chen (S22)
- */
 public class Triangle implements Shape {
 
     private final int[][] points;
