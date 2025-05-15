@@ -1,6 +1,11 @@
 package drawing.shapes;
 
-public record Line(int[] start, int[] end) {
+public record Line(int[] start, int[] end) implements Shape {
+
+    @Override
+    public Line[] toLines() {
+        return new Line[]{this};  // Өөрийгөө буцаана
+    }
 
     public char[] toJPEG() {
         // Pretend this works.
