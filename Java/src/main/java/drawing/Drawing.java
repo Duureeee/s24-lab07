@@ -1,6 +1,5 @@
 package drawing;
 
-import drawing.shapes.Line;
 import drawing.shapes.Shape;
 import drawing.writing.JPEGWriter;
 import drawing.writing.PNGWriter;
