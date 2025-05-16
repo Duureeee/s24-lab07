@@ -2,7 +2,7 @@ import frogger.*;
 
 public class test2 {
     public static void main(String[] args) {
-        // Зам дээрх зайны байдал (true = битүү, false = сул)
+        // Road occupancy status (true = occupied, false = free)
         boolean[] roadStatus = {false, false, true, false, false};
 
         Road road = new Road(roadStatus);
@@ -10,36 +10,36 @@ public class test2 {
 
         FroggerID id = new FroggerID("Suldee", "Inherism", "1234567890", "12345", "StateX", "M");
 
-        // Frogger-г 0 байрлал дээр үүсгэж байна
+        // Create Frogger at position 0
         Frogger frogger = new Frogger(road, 0, records, id);
 
-        System.out.println("Эхний байрлал: " + frogger.getPosition());
+        System.out.println("Initial position: " + frogger.getPosition());
 
-        // Урагш хөдөлгөөн оролдоно (байрлал 1 рүү)
+        // Try to move forward (to position 1)
         boolean movedForward = frogger.move(true);
-        System.out.println("Урагш хөдөлсөн эсэх: " + movedForward);
-        System.out.println("Шинэ байрлал: " + frogger.getPosition());
+        System.out.println("Moved forward? " + movedForward);
+        System.out.println("New position: " + frogger.getPosition());
 
-        // Урагшаа дахин хөдөлж оролд (байрлал 2 - битүү учир амжилтгүй)
+        // Try to move forward again (to position 2 - occupied, should fail)
         movedForward = frogger.move(true);
-        System.out.println("Урагш дахин хөдөлсөн эсэх: " + movedForward);
-        System.out.println("Байрлал хэвээр: " + frogger.getPosition());
+        System.out.println("Moved forward again? " + movedForward);
+        System.out.println("Position remains: " + frogger.getPosition());
 
-        // Буцах хөдөлгөөн оролдоно (байрлал -1 рүү, хүчинтэй биш учир амжилтгүй)
+        // Try to move backward (to position -1 - invalid, should fail)
         boolean movedBack = frogger.move(false);
-        System.out.println("Буцах хөдөлсөн эсэх: " + movedBack);
-        System.out.println("Байрлал хэвээр: " + frogger.getPosition());
+        System.out.println("Moved backward? " + movedBack);
+        System.out.println("Position remains: " + frogger.getPosition());
 
-        // Record бүртгэх оролдлого
+        // Try to add record
         boolean recordAdded = frogger.recordMyself();
-        System.out.println("Record нэмэгдсэн эсэх: " + recordAdded);
+        System.out.println("Record added? " + recordAdded);
 
-        // Давтан бүртгэх оролдлого (давхардах учраас false буцах ёстой)
+        // Try to add the record again (should fail)
         boolean recordAddedAgain = frogger.recordMyself();
-        System.out.println("Давтан record нэмэгдсэн эсэх: " + recordAddedAgain);
+        System.out.println("Record added again? " + recordAddedAgain);
 
-        // Бүх record-уудыг хэвлэх
-        System.out.println("Бүх бүртгэлүүд:");
+        // Print all records
+        System.out.println("All records:");
         for (FroggerID r : records.getAllRecords()) {
             System.out.println(r);
         }
